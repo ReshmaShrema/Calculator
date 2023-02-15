@@ -1,0 +1,331 @@
+initializing a Variables
+let array=[];
+
+arrays are list of data
+
+git is a source control management system
+
+JavaScript make the website dynamic
+
+git helps us to  control our source code. For example, you can easily go back to older states of your code or revert in case you mess up your code
+
+importing script tag .in between head ,in the body part
+
+if we write or import the code in head,this block the rendering of the page until the script is done.so always put the js code before the closing body tag .so if we put the script tag at the end of the body so that the browser has a chance of first parsing all the HTML code and finishing that rendering before it execute the script
+
+if two files are dependent then include the dependent file after the independent file(app is dependent to vender,so first import vendor then import app.js)
+
+order of execution is mattered in JavaScript
+
+Variables is a data container or data storage which holds some data.the value can change.
+const is a special form of the variable .we delare a variable as const if its value is fixed or its value is not changed in the program.
+in some point we want to store data which never change it .in that situation we define the variable as  const.
+if we decale a variable as const then if there is a need to change the value of the variable,we can change it in the place where the variable defined as constant instead of change it in different place
+also other developers can easily recongnize by reading this 
+
+in JavaScript we create Variables using let,const,(var) keyword
+
+let name='Reshma';
+let name ='Rena';//error
+name='Rena';
+
+naming convention 
+use camel case(userName)
+variable name must be meaning full,must be readable ,convey which data stored in the variable
+
+JavaScript is case sensitive
+
+variable declaration in JavaScript
+let name;
+
+initializing the vaiable in JavaScript
+let name='Rena';
+
+
+semicolon is not mandatory but if we use two statement in a line we must use semicolon
+
+/*variable
+let name="rena";
+let name='Ram';//error let could not allow redeclaration of same variable(SyntaxError: Identifier 'name' has already been declared)
+name='Ram';
+const pi=3.14;
+pi=88;//error(TypeError: Assignment to constant variable.)*/
+
+alert('hello');
+
+operators are syntax features in JavaScript that allow us to manipulate values(+,-,*,/,%,**)
+
+a variable is a data container where the data can be changed during program execution
+
+constant is a data container where the value cannot be changed
+
+variables can store data that may change during program execution.so hard coding is not always on optional .additionally ,the same value might be needed in multiple places.using a variable allows you to refer to that variable and only change the value in one place instead of multiple place in code
+
+= is an Assignment operators(assigns a value)
+
+JavaScript has the ability to overwrite html code
+
+datatypes in JavaScript
+numbers(-3,4,44.434)positive,negative,floting point numbers,integers(number without decimal place)
+String(text)('hi',"hi',`hi`)('' is an empty string)
+
+string concatenation
+build a string from multiple substring
+
+JavaScript code is parsed,compiled and executed from top to bottom.html file get parsed from top to bottom by the browser
+
+we can initialize a variable with another variable
+let currentResult = defaultResult;//coppy the value from defaultResult to currentResult
+
+we can use single and double for representing the string
+
+string inside a string is not possible in JavaScript
+
+if we want single quote in the string ,then wrape it inside double quotes.(vice versa)
+
+'rena's''//it is not possible
+
+let currentResultString='('+defaltResult+'+10)*3/2+1'
+
+use back tics instead of double quotes.
+
+let currentResultString = `( + ${defaltResult} + +10)*3/2+1`;
+
+the overall content inside the back ticks is called template literal
+
+we can easily write multiline string in template literal
+'hello
+dsfsd'
+not allowed(because js cannot find the end of the string in the line)
+'hello'+
+'sddfsd'
+`dfdsfdsfs
+sfsdfsf`
+is allowed
+
+
+by default browse will strips the redundant whitespace.for omiting this browser default behavior use white-space:pre in css
+
+\n new line
+if we insert \n in a paragraph browser remove the effect 
+so use white-space:pre
+
+using backslash in a string has a special meaning ,it escapes the character that comes after the backslash is not treated as a normal character with its normal meaning but instead combined with the backslash it gets a special meaning 
+\n line break
+\'
+\"
+\\
+
+data type means data you work with in your code is of different type (number,text)
+
+30 is number and '30' is string
+
+JavaScript is a weakly typed,dynamic language so 
+let myName = 'Max';
+myName=30;
+
+I refer function as code on demand.A function which allows to define some code which we then execute at a later point of time
+
+function definition 
+function functionName(){
+    //code
+}
+
+funcion calling
+functionName();
+
+function take some data called parameter
+we can pass 0 to any number of parameters into the function
+function can return something ,which is defined by return keyword
+
+the funcion code is does not run immediately when the script gets first executed , instead js just sees the function and stores it in memory .then execute this code inside the function only when we call the function by its functionName();
+
+
+if we define any parameter in the function definition then we pass the values when we call the function
+
+
+js read the entire script before it execute the code
+
+function may or may not have some parameter
+
+the parameter which we define here are available in the function body
+
+don't put semicolon after {}
+
+global scope
+
+alert is a built in function into the browser
+ 
+value passed when we call a function is called argument
+add(4,3);
+
+
+if we perform some operation and we want you to use the result outside the function ,then we return it useing return function
+
+function add(num1,num2){
+    result = num1 + num2;
+    stringify(num1, num2, '+', result);
+    return result;
+}
+function subtract(num1,num2){
+    result = num1-num2;
+    stringify(num1,num2,'-',result)
+    return result;
+}
+ function stringify(num1,num2,operator,result){
+    currentResultString=`${num1} ${operator} ${num2} = ${result}`;
+ }
+
+
+order of codding
+define const and variable before use it.decalre it on the top
+
+we can define a funtion before or after the function  call statement
+
+in js ,it parses the entire script from top to bottom .and it will take any functions it find in there and automatically pull them to the top.so it automatically registers all functions before it then really executes the js scrite
+
+the order is matted for variable and constants but it does not for function
+
+if we define a variable globbaly then we can assses it in anywhere 
+result declare globally
+let result
+funcion add(num1,num2){
+    result= num1,num2;
+}
+add(3,5);
+console.log(result);
+
+or
+result declare  locally
+funcion add(num1,num2){
+    result= num1,num2;
+    return result;
+}
+let currentResult = add(3,5);
+console.log(currentResult)
+
+the function that manipulate a global value is not a good practice.so define the vareable locally and ensure that the function will not alter anything global
+
+
+pure function means the function that get some input and return an output for the same input .it always return the same output and it does not manipulate anything global 
+
+if a variable or constant define inside of a function then this has called local or block scope .which means its available inside of this block.we cannot use it outside the block
+
+block means {}
+
+function have full access to their surrounging context .so to all the variables that defined above them or outside of them but whay you define inside of a function is only availabel in there ,the only way of kind of gettin it out is by returning it 
+
+we can create a vaiable defined globally and then try to create it locally in a function .so we have it declared with let or const globally and then we want to do the same with let or const in the function so not ovarwrite the existing one but create a new one
+
+
+let userName = 'Max';
+function greetUser(name) {
+  let userName = name;
+  alert(userName);
+}
+userName = 'Manu';
+greetUser('Max');
+
+It indeed is not allowed on the same level/ in the same scope.
+We o declare another variable inside of the function. But since variables in functions get their own scope, JavaScript does something which is called "shadowing".
+
+It creates a new variable on a different scope - this variables does not overwrite or remove the global variable by the way - both co-exist.
+
+
+return statement is useful for getting data out of the function
+
+the code after return statement inside a function is not executed
+
+return statement ends the funcion execution
+
+
+return;
+this would not return anything ,it just cancel function execution
+
+addEvetListener() is a built in function that build into the browse.it take two parameterss and the first parameter is actrally a string which identifies the event to which we want to listen .the second parameter is actually should be a function .tell the browse that you tell javascript which function should be executed if the button is clicked
+
+addbtn.addEvetListener('click',add())
+TypeError: Failed to execute 'addEventListener' on 'EventTarget': parameter 2 is not of type 'Object'.
+calling the function is wrong.we want to tell the browser what to execute when a click occurs.
+if we execute add() like this,the code gets parsed by the browser  when it encounters our script and in the end after registering all function it will go ahead and it will add the event listner but then browse call the function.
+so we must specify the functionname only so that the function should execute when the button is clicked .
+we tell the js engine when this button is clicked ,have a look at the function with this name and execute it for meaning
+browser execute the function when the click occurs
+
+"Indirect" vs "Direct" Function Execution
+two ways of executing a function:
+
+function add() {
+  something = someNum + someOtherNum;
+}
+add() vs add
+In general, you call a function that you defined by using its name (e.g. add) and adding parentheses (with any parameters the function might need - or empty parentheses if no parameters are required like in the above example).
+
+=> add()
+
+This is how you execute a function from your code. Whenever JavaScript encounters this statement, it goes ahead and runs the code in the function. Period!
+
+Sometimes however, you don't want to execute the function immediately. You rather want to "tell JavaScript" that it should execute a certain function at some point in the future (e.g. when some event occurs).
+
+That's when you don't directly call the function but when you instead just provide JavaScript with the name of the function.
+
+=> someButton.addEventListener('click', add);
+
+This snippet would tell JavaScript: "Hey, when the button is clicked, go ahead and execute add.".
+
+someButton.addEventListener('click', add()); would be wrong.
+
+Why? Because JavaScript would encounter that line when it parses/ executes your script and register the event listener AND immediately execute add - because you added parentheses => That means (see above): "Please execute that function!".
+
+Just writing add somewhere in your code would do nothing by the way:
+
+let someVar = 5;
+add
+alert('Do something else...');
+Why?
+
+Because you just throw the name of the function in there but you don't give any other information to JavaScript. It basically doesn't know what to do with that name ("Should I run that when a click occurs? After a certain amount of time? I don't know...") and hence JavaScript kind of ignores this statement.
+
+function double(number){
+    return number*2;
+}
+let number =10;
+function transform(number,double){
+   return double(number);
+}
+
+A functionn defines code which does not execute right away but which can be executed multiple times by calling the function
+
+function greetUser(name) {
+  alert('Hi ' + name);
+}
+function is the keyword
+greetUser is the function name
+name is the parameter
+alert(hi ) is the function body
+
+function parameters are the data that can be provided to the function (input ) available only inside of the funciton like local variable
+
+global scope means the  scope of variable is  everywhere in the script including functions
+
+shadowed variable means a local variable, declared in a function ,that also exists as a global variable
+
+variable declared inside of function is live in the local scope
+MDN => JavaScript Basics: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+MDN => Variables: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables
+
+MDN => Operators: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math
+
+MDN => Functions: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions
+
+MDN => Arrays: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays
+
+MDN => Objects: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation
+
+
+
+
+
+parameter vs argument
